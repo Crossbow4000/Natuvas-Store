@@ -1,13 +1,20 @@
 import Head from 'next/head';
 
 export default function Home({ printfulResponse }) {
+  const storeObjects = [];
+
   return (
     <div>
       <Head>
         <title>Create Next App</title>
       </Head>
 
-      {printfulResponse}
+      {printfulResponse.map((item, i) => {
+        <div>
+          <h1>{item.name}</h1>
+          <img src={item.thumbnail_url} alt={"An image of " + item.name}/>
+        </div>
+      })}
       
     </div>
   );
@@ -20,7 +27,6 @@ export async function getStaticProps() {
     headers: {'Authorization': 'Bearer ' + printfulApiKey,}
   })
   .then(response => { return response.json() })
-  .then(data => { return JSON.stringify(data) })
 
   return {
     props: {
