@@ -9,7 +9,7 @@ export default function Home({ printfulApiKey }) {
         <title>Create Next App</title>
       </Head>
 
-      Printfulkey: {myEnvVar}
+      {myEnvVar}
       
     </div>
   );
