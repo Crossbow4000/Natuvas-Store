@@ -9,7 +9,7 @@ export default function Home({ printfulResponse }) {
         <title>Create Next App</title>
       </Head>
 
-      {printfulResponse.map((item, i) => {
+      {printfulResponse.result.map((item, i) => {
         <div>
           <h1>{item.name}</h1>
           <img src={item.thumbnail_url} alt={"An image of " + item.name}/>
