@@ -20,7 +20,7 @@ export async function getStaticProps() {
     headers: {'Authorization': 'Bearer ' + printfulApiKey,}
   })
   .then(response => { return response.json() })
-  .then(data => { return data.toString() })
+  .then(data => { return JSON.stringify(data) })
 
   return {
     props: {
