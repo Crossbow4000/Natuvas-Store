@@ -15,7 +15,6 @@ export default function Home({ printfulApiKey }) {
 
 export async function getStaticProps() {
   const printfulApiKey = process.env.PRINTFUL;
-  console.log(printfulApiKey)
 
   return {
     props: {
