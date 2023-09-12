@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      printfulResponse: printfulResponse.json.toString(),
+      printfulResponse: printfulResponse.json().toString(),
     },
   };
 }
