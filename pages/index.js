@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Home({ printfulApiKey }) {
+export default function Home({ printfulResponse }) {
   return (
     <div>
       <Head>
@@ -14,11 +14,15 @@ export default function Home({ printfulApiKey }) {
 }
 
 export async function getStaticProps() {
-  const printfulApiKey = process.env.PRINTFUL;
+  const printfulApiKey = await process.env.PRINTFUL;
+  const printfulResponse = await fetch('https://api.printful.com/store/products', {
+    method: 'GET',
+    headers: {'Authorization': 'Bearer ' + printfulApiKey,}
+  });
 
   return {
     props: {
-      printfulApiKey,
+      printfulResponse: printfulResponse.json.toString(),
     },
   };
 }
