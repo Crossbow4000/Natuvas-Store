@@ -18,11 +18,13 @@ export async function getStaticProps() {
   const printfulResponse = await fetch('https://api.printful.com/store/products', {
     method: 'GET',
     headers: {'Authorization': 'Bearer ' + printfulApiKey,}
-  });
+  })
+  .then(response => { return response.json() })
+  .then(data => { return data.toString() })
 
   return {
     props: {
-      printfulResponse: printfulResponse.json().toString(),
+      printfulResponse: printfulResponse,
     },
   };
 }
