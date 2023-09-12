@@ -7,7 +7,7 @@ export default function Home({ printfulResponse }) {
         <title>Create Next App</title>
       </Head>
 
-      {printfulApiKey}
+      {printfulResponse}
       
     </div>
   );
