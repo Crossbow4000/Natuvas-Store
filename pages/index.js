@@ -1,14 +1,24 @@
 import Head from 'next/head';
 
-export default function Home() {
+export default function Home({ printfulApiKey }) {
   return (
     <div>
       <Head>
         <title>Create Next App</title>
       </Head>
 
-      Hi
+      {printfulApiKey}
       
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const printfulApiKey = process.env.PRINTFUL;
+
+  return {
+    props: {
+      printfulApiKey,
+    },
+  };
 }
