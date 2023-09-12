@@ -15,6 +15,8 @@ export default function Home({ printfulResponse }) {
           <img src={item.thumbnail_url} alt={"An image of " + item.name}/>
         </div>
       })}
+
+      {JSON.stringify(printfulResponse.result)}
       
     </div>
   );
