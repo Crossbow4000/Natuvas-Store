@@ -1,1 +1,1 @@
-import './iteCard.css';
+import './itemCard.css';
