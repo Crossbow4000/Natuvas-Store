@@ -11,7 +11,7 @@ export default function Home({ printfulResponse }) {
       </Head>
 
       {printfulResponse.result.map((item, i) => 
-        <ItemCard {...[item.thumbnail_url, item.name]}/>
+        <ItemCard itemImageURL={item.thumbnail_url} itemName={item.name}/>
       )}      
     </div>
   );
