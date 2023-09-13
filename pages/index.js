@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import ItemCard from '../components/itemCard/itemCard.js'
 
 export default function Home({ printfulResponse }) {
   const storeObjects = [];
@@ -10,10 +11,7 @@ export default function Home({ printfulResponse }) {
       </Head>
 
       {printfulResponse.result.map((item, i) => 
-        <div>
-          <h1>{item.name}</h1>
-          <img src={item.thumbnail_url} alt={"An image of " + item.name}/>
-        </div>
+        <ItemCard {...[item.thumbnail_url, item.name]}/>
       )}      
     </div>
   );
