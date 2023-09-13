@@ -1,10 +1,23 @@
 .itemCard {
   height: max-content;
   width: 300px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
 .itemCardImage {
   width: 200px;
   height: 200px;
   object-fit: cover;
+
+  grid-row: 1;
+}
+
+.itemCardName {
+  grid-row: 2;
+}
+
+.itemCardButton {
+  grid-row: 3;
 }
