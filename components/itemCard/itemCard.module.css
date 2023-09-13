@@ -31,10 +31,9 @@
 .itemCardButton {
   grid-row: 3;
 
-  height: 30px;
   width: 100%;
 
-  padding-block: 10px;
+  padding-block: 7.5px;
 
   background-color: black;
 
