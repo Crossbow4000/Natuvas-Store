@@ -4,7 +4,7 @@ import image from './heroSectionBackground.jpg'
 
 export default function HeroSection() {
   return (
-    <div class={styles.heroSection}>
+    <div className={styles.heroSection}>
 
     </div>
   )
