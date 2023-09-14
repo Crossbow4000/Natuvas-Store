@@ -1,6 +1,6 @@
 import styles from './heroSection.module.css';
 import homeStyles from '../home.module.css';
-import backgroundImage from './files/heroSectionBackground.jpg'
+import backgroundImage from './files/heroSectionBackground.jpeg'
 
 export default function HeroSection() {
   return (
