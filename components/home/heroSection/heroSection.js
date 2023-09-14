@@ -4,7 +4,10 @@ import homeStyles from '../home.module.css';
 export default function HeroSection() {
   return (
     <div className={styles.heroSection}>
-
+      <div className={styles.heroSectionElementsWrapper}>
+        <h1 className={styles.heroSectionTitle}>Natuvas</h1>
+        <h2 className={styles.heroSectionSubtitle}>Hang the beauty of nature on your wall.</h2>
+      </div>
     </div>
   )
 }

@@ -5,4 +5,31 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('https://firebasestorage.googleapis.com/v0/b/natuvas-store.appspot.com/o/heroSectionBackground.jpg?alt=media&token=db87e722-7506-46ee-9942-86d320dcb8ba');
+  background-attachment: fixed;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSectionElementsWrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  
+  gap: 20px;
+}
+
+.heroSectionTitle {
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size: 90px;
+}
+
+.heroSectionSubtitle {
+  text-align: center;
+  color: white;
+  font-weight: 200;
+  font-size: 18px;
 }

@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import HeroSection from '../components/home/heroSection/heroSection.js'
+import WelcomeSection from '../components/home/welcomeSection/welcomeSection.js'
+
 
 /* 
 printfulResponse.result.map((item, i) => 
@@ -17,6 +19,7 @@ export default function Home({ printfulResponse }) {
       </Head>
 
       <HeroSection />
+      <WelcomeSection />
     </div>
   );
 }
