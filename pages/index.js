@@ -1,5 +1,11 @@
 import Head from 'next/head';
-import ItemCard from '../components/itemCard/itemCard.js'
+import HeroSection from '../components/home/heroSection/heroSection.js'
+
+/* 
+printfulResponse.result.map((item, i) => 
+  <ItemCard itemImageURL={item.thumbnail_url} itemName={item.name}/>
+) 
+*/
 
 export default function Home({ printfulResponse }) {
   const storeObjects = [];
@@ -10,9 +16,7 @@ export default function Home({ printfulResponse }) {
         <title>Create Next App</title>
       </Head>
 
-      {printfulResponse.result.map((item, i) => 
-        <ItemCard itemImageURL={item.thumbnail_url} itemName={item.name}/>
-      )}      
+      <HeroSection />
     </div>
   );
 }
