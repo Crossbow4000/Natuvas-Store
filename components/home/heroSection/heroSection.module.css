@@ -33,3 +33,25 @@
   font-weight: 200;
   font-size: 18px;
 }
+
+.heroSectionButton {
+  color: white;
+  font-size: 18px;
+
+  margin-inline: auto;
+  margin-top: 30px;
+
+  border: 3px solid white;
+
+  padding-inline: 20px;
+  padding-block: 10px;
+
+  user-select: none;
+
+  transition: 100ms ease-in-out;
+}
+.heroSectionButton:hover {
+  cursor: pointer;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
