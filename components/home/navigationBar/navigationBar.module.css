@@ -3,4 +3,16 @@
   height: 50px;
   
   background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-inline: 20px;
+}
+
+.navigationBarTitle {
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
 }
