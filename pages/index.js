@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import Head from 'next/head';
 import NavigationBar from '../components/home/navigationBar/navigationBar.js'
 import HeroSection from '../components/home/heroSection/heroSection.js'
@@ -11,7 +12,6 @@ printfulResponse.result.map((item, i) =>
 */
 
 export default function Home({ printfulResponse }) {
-  const storeObjects = [];
 
   return (
     <div>
@@ -20,7 +20,7 @@ export default function Home({ printfulResponse }) {
       </Head>
 
       <NavigationBar />
-      <HeroSection />
+      <HeroSection ref={(heroSection) => {this.heroSection = heroSection}} />
       <WelcomeSection />
     </div>
   );
