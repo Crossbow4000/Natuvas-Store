@@ -1,13 +1,13 @@
 .navigationBar {
   width: 100% - 20px;
-  height: 80px;
+  height: 70px;
   
   background-color: black;
 
   display: flex;
   align-items: center;
 
-  padding-inline: 20px;
+  padding-inline: 30px;
 }
 
 .navigationBarTitle {
