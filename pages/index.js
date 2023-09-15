@@ -13,10 +13,7 @@ printfulResponse.result.map((item, i) =>
 
 export default function Home({  }) {
 
-  useEffect(() => {
-    // Scroll the page down by 80px after the component has mounted
-    window.scrollTo(0, 80);
-  }, []);
+  useEffect(() => { window.scrollTo(0, 80) }, []);
 
   return (
     <div>
