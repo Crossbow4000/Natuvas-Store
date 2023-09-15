@@ -16,7 +16,7 @@ export default function Home({ printfulResponse }) {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Natuvas | Nature Canvases</title>
       </Head>
 
       <NavigationBar />
