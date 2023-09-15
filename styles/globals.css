@@ -8,20 +8,11 @@
   outline: none;
 }
 
+body,
 html {
-  background-color: rgb(246, 246, 246);
+  background-color: black;
 }
 
 button:hover {
   cursor: pointer;
-}
-
-html {
-  overflow: hidden;
-  height: 100%;
-}
-
-body {
-  height: 100%;
-  overflow: auto;
 }
