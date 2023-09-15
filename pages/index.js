@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect } from 'react'
 import Head from 'next/head';
 import NavigationBar from '../components/home/navigationBar/navigationBar.js'
 import HeroSection from '../components/home/heroSection/heroSection.js'
@@ -11,7 +11,12 @@ printfulResponse.result.map((item, i) =>
 ) 
 */
 
-export default function Home({ printfulResponse }) {
+export default function Home({  }) {
+
+  useEffect(() => {
+    // Scroll the page down by 80px after the component has mounted
+    window.scrollTo(0, 80);
+  }, []);
 
   return (
     <div>
@@ -20,7 +25,7 @@ export default function Home({ printfulResponse }) {
       </Head>
 
       <NavigationBar />
-      <HeroSection ref={(heroSection) => {this.heroSection = heroSection}} />
+      <HeroSection />
       <WelcomeSection />
     </div>
   );
