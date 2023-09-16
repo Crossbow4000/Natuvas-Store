@@ -4,3 +4,12 @@
 
   background-color: black;
 }
+
+.welcomeSectionTitle {
+  color: white;
+  font-size: 80px;
+  font-weight: 500;
+
+  padding-left: 20%;
+  padding-top: 80px;
+}
