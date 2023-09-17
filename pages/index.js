@@ -4,6 +4,9 @@ import NavigationBar from '../components/home/navigationBar/navigationBar.js'
 import HeroSection from '../components/home/heroSection/heroSection.js'
 import WelcomeSection from '../components/home/welcomeSection/welcomeSection.js'
 import FeaturedSection from '../components/home/featuredSection/featuredSection.js'
+import splashText1 from '../components/home/splashText1/splashText1.js'
+import SplashText1 from '../components/home/splashText1/splashText1.js';
+
 
 
 /* 
@@ -26,6 +29,7 @@ export default function Home({  }) {
       <HeroSection />
       <WelcomeSection />
       <FeaturedSection featuredItems={[]} />
+      <SplashText1 />
     </div>
   );
 }

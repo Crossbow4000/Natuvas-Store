@@ -1,0 +1,21 @@
+.splashText1 {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/natuvas-store.appspot.com/o/splashText1Background.jpg?alt=media&token=b03f5ea2-cf0f-4974-bdc1-4013ab7116b1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: grid
+}
+
+.splashText1Text {
+  color: white;
+  font-size: 90px;
+  font-weight: 500;
+
+  align-self: center;
+
+  padding-left: 280px;
+}
