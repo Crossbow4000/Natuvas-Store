@@ -1,6 +1,7 @@
+import Link from 'next/link';
+
 import styles from './heroSection.module.css';
 import homeStyles from '../home.module.css';
-import Link from 'next/link';
 
 export default function HeroSection() {
   return (

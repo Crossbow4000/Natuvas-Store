@@ -3,6 +3,7 @@ import Head from 'next/head';
 import NavigationBar from '../components/home/navigationBar/navigationBar.js'
 import HeroSection from '../components/home/heroSection/heroSection.js'
 import WelcomeSection from '../components/home/welcomeSection/welcomeSection.js'
+import FeaturedSection from '../components/home/featuredSection/featuredSection.js'
 
 
 /* 
@@ -24,10 +25,11 @@ export default function Home({  }) {
       <NavigationBar />
       <HeroSection />
       <WelcomeSection />
+      <FeaturedSection featuredItems={[]} />
     </div>
   );
 }
-
+``
 // export async function getStaticProps() {
 //   const printfulApiKey = await process.env.PRINTFUL;
 //   const printfulResponse = await fetch('https://api.printful.com/store/products', {
