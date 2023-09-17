@@ -15,8 +15,9 @@
 }
 
 .welcomeSectionParagraph {
-  color: white;
-  font-size: 18px;
+  color: lightgray;
+  font-size: 20px;
+  font-weight: 300;
 
   padding-right: 20%;
   padding-left: 30%;
