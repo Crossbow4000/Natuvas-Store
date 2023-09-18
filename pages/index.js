@@ -5,8 +5,8 @@ import NavigationBar from '../components/home/navigationBar/navigationBar.js'
 import HeroSection from '../components/home/heroSection/heroSection.js'
 import WelcomeSection from '../components/home/welcomeSection/welcomeSection.js'
 import FeaturedSection from '../components/home/featuredSection/featuredSection.js'
-import splashText1 from '../components/home/splashText1/splashText1.js'
-import SplashText1 from '../components/home/splashText1/splashText1.js';
+import SplashText1 from '../components/home/splashText1/splashText1.js'
+import SplashText2 from '../components/home/splashText2/splashText2.js';
 
 // printfulResponse.result.map((item, i) => 
 //   <ItemCard itemImageURL={item.thumbnail_url} itemName={item.name}/>
@@ -27,6 +27,7 @@ export default function Home({  }) {
       <WelcomeSection />
       <FeaturedSection featuredItems={[]} />
       <SplashText1 />
+      <SplashText2 />
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.splashText2 {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.splashText2Image {
+  height: 100%;
+  width: 50vw;
+
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/natuvas-store.appspot.com/o/splashText2Background.jpg?alt=media&token=dae7a180-b24a-4c5f-b01d-f24b23218e89");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.splashText2TextContainer {
+  height: 100%;
+  width: 50vw;
+
+  background-color: white;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.splashText2Text {
+  color: black;
+  font-size: 100px;
+  font-weight: 400;
+
+  text-align: right;
+}
