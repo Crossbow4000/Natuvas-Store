@@ -17,5 +17,19 @@
 
   align-self: center;
 
-  padding-left: 305px;
+  padding-left: 300px;
+}
+
+@media (max-width: 1000px) {
+  .splashText1Text {
+    padding-left: 200px;
+  }
+}
+
+@media (max-width: 825px) {
+  .splashText1Text {
+    text-align: center;
+
+    padding: 0;
+  }
 }
