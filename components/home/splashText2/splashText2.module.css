@@ -35,3 +35,32 @@
 
   text-align: right;
 }
+
+@media (max-width: 825px) {
+  .splashText2 {
+    display: grid;
+
+    grid-template-columns: 100%;
+  }
+
+  .splashText2Image {
+    width: 100%;
+
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .splashText2TextContainer {
+    width: 100%;
+
+    grid-row: 1;
+    grid-column: 1;
+
+    background: transparent;
+  }
+
+  .splashText2Text {
+    color: white;
+    text-align: right;
+  }
+}
