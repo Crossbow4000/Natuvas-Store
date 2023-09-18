@@ -4,6 +4,8 @@
   margin-block: 100px;
 
   background-color: black;
+
+  display: grid;
 }
 
 .welcomeSectionTitle {
@@ -23,4 +25,24 @@
   padding-left: 30%;
 
   margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .welcomeSectionTitle {
+    text-align: center;
+  
+    padding: 0;
+  }
+
+  .welcomeSectionParagraph {
+    justify-self: center;
+
+    padding-inline: 20%;
+  }
+}
+
+@media (max-width: 700px) {
+  .welcomeSectionParagraph {
+    padding-inline: 5%;
+  }
 }
