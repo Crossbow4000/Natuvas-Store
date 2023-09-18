@@ -8,7 +8,7 @@ export default function CountNotBeFound() {
   return (
     <div>
       <h1>401</h1>
-      <h2>The page {referrer} could not be found</h2>
+      <h2>The page: {referrer} could not be found</h2>
     </div>
   )
 }
