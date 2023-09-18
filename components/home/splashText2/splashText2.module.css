@@ -15,6 +15,7 @@
   background-image: url("https://firebasestorage.googleapis.com/v0/b/natuvas-store.appspot.com/o/splashText2Background.jpg?alt=media&token=dae7a180-b24a-4c5f-b01d-f24b23218e89");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .splashText2TextContainer {
