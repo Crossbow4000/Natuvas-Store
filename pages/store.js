@@ -1,7 +1,13 @@
+import Head from 'next/head';
+
 export default function Store() {
   return (
     <div>
-      <p>Secret</p>
+      <Head>
+        <title>Natuvas | Store</title>
+      </Head>
+
+      <p>WIP</p>
     </div>
   )
 }

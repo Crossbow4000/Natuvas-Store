@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Head from 'next/head';
+
 import NavigationBar from '../components/home/navigationBar/navigationBar.js'
 import HeroSection from '../components/home/heroSection/heroSection.js'
 import WelcomeSection from '../components/home/welcomeSection/welcomeSection.js'
