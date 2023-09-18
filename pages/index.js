@@ -8,13 +8,9 @@ import FeaturedSection from '../components/home/featuredSection/featuredSection.
 import splashText1 from '../components/home/splashText1/splashText1.js'
 import SplashText1 from '../components/home/splashText1/splashText1.js';
 
-
-
-/* 
-printfulResponse.result.map((item, i) => 
-  <ItemCard itemImageURL={item.thumbnail_url} itemName={item.name}/>
-) 
-*/
+// printfulResponse.result.map((item, i) => 
+//   <ItemCard itemImageURL={item.thumbnail_url} itemName={item.name}/>
+// ) 
 
 export default function Home({  }) {
 
@@ -34,7 +30,7 @@ export default function Home({  }) {
     </div>
   );
 }
-``
+
 // export async function getStaticProps() {
 //   const printfulApiKey = await process.env.PRINTFUL;
 //   const printfulResponse = await fetch('https://api.printful.com/store/products', {
