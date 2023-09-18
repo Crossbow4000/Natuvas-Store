@@ -31,7 +31,7 @@ export default function Home({ featuredItems }) {
 }
 
 export async function getStaticProps() {
-  const featuredItems = getFeaturedItems().featuredItems
+  const featuredItems = getFeaturedItems()
 
   const printfulApiKey = await process.env.PRINTFUL
 
