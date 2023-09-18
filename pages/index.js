@@ -32,7 +32,7 @@ export default function Home({ featuredItems }) {
 
 export async function getStaticProps() {
   const printfulApiKey = await process.env.PRINTFUL;
-  const printfulResponse = await fetch('https://api.printful.com/store/products/62f09f11-309c-4237-a23b-8406ddeeeb4a:8c444462-05c3-4c24-95e3-49b08a24a739', {
+  const printfulResponse = await fetch('https://api.printful.com/store/products/13', {
     method: 'GET',
     headers: {'Authorization': 'Bearer ' + printfulApiKey,}
   })
