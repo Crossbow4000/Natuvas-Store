@@ -44,7 +44,7 @@ export async function getStaticProps() {
       })
 
       const json = await printfulResponse.json()
-      return { json }
+      return json.result
     })
   )
   
