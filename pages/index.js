@@ -28,9 +28,13 @@ export default function Home({ featuredItems }) {
   )
 }
 
+const featuredItems = [ 
+  320175557, // 0008,
+  320175560  // 0011
+]
+
 export async function getStaticProps() {
-  const featuredItems = [ 320175557, 320175560 ]
-  // 0008, 0011
+  
 
   const printfulApiKey = await process.env.PRINTFUL
 
@@ -42,7 +46,7 @@ export async function getStaticProps() {
       })
 
       const json = await printfulResponse.json();
-      return { name: json.name, thumbnail_url: json.thumbnail_url };
+      return { name: json.result.name, thumbnail_url: json.result.thumbnail_url };
     })
   )
   
