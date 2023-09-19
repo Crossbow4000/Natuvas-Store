@@ -29,12 +29,8 @@ export default function Home({ featuredItems }) {
 }
 
 export async function getStaticProps() {
-  const featuredItems = [
-    320175557,
-    320175560 
-  ]
-  // 0008
-  // 0011
+  const featuredItems = [ 320175557, 320175560 ]
+  // 0008, 0011
 
   const printfulApiKey = await process.env.PRINTFUL
 
