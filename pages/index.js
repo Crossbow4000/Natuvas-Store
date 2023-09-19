@@ -24,7 +24,7 @@ export default function Home({ featuredItems, ids }) {
       <FeaturedSection featuredItems={featuredItems} />
       <SplashText1 />
       <SplashText2 />
-      {JSON.stringify(ids.json())}
+      {ids.json()}
     </div>
   )
 }
