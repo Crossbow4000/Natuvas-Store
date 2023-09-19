@@ -37,7 +37,7 @@ export async function getStaticProps() {
 
   let   featuredItemsList = []
 
-  for(i=0; i < featuredItems.length; i++) {
+  for(let i=0; i < featuredItems.length; i++) {
     const printfulResponse = await fetch('https://api.printful.com/store/products/' + featuredItems[i], {
       method: 'GET',
       headers: {'Authorization': 'Bearer ' + printfulApiKey,}
