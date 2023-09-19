@@ -31,7 +31,7 @@ export default function Home({ featuredItems, propId }) {
 
 const featuredItems = [ 
   320175574, // 0008,
-  320175560  // 0011
+  320175562  // 0011
 ]
 
 export async function getStaticProps() {
