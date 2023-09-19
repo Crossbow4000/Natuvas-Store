@@ -8,7 +8,7 @@ import FeaturedSection from '../components/home/featuredSection/featuredSection.
 import SplashText1 from '../components/home/splashText1/splashText1.js'
 import SplashText2 from '../components/home/splashText2/splashText2.js'
 
-export default function Home({ featuredItems, ids }) {
+export default function Home({ featuredItems, propId }) {
 
   useEffect(() => { window.scrollTo(0, 80) }, [])
 
@@ -53,12 +53,11 @@ export async function getStaticProps() {
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + printfulApiKey },
   })
-
-  console.warn(ids)
   
   return {
     props: {
       featuredItems: featuredItemsList,
+      propId: ids,
     },
   }
 }
