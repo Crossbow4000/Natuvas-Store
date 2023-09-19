@@ -38,7 +38,7 @@ export async function getStaticProps() {
 
   const featuredItemsList = await Promise.all(
     featuredItems.map(async (item) => {
-      const printfulResponse = await fetch(`https://api.printful.com/store/products/320175557`, {
+      const printfulResponse = await fetch(`https://api.printful.com/store/products/${item}`, {
         method: 'GET',
         headers: { 'Authorization': 'Bearer ' + printfulApiKey },
       })
