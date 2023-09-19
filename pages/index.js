@@ -53,6 +53,8 @@ export async function getStaticProps() {
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + printfulApiKey },
   })
+
+  console.log(ids)
   
   return {
     props: {
