@@ -60,7 +60,7 @@ export async function getStaticProps() {
   return {
     props: {
       featuredItems: featuredItemsList,
-      propId: ids,
+      propId: ids.json(),
     },
   }
 }
