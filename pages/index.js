@@ -11,9 +11,6 @@ import SplashText2 from '../components/home/splashText2/splashText2.js'
 export default function Home({ featuredItems, propId }) {
 
   useEffect(() => { window.scrollTo(0, 80) }, [])
-  useEffect(() => {
-    console.log(propId)
-  })
 
   return (
     <div>
@@ -27,7 +24,7 @@ export default function Home({ featuredItems, propId }) {
       <FeaturedSection featuredItems={featuredItems} />
       <SplashText1 />
       <SplashText2 />
-      {}
+      {JSON.stringify(propId)}
     </div>
   )
 }
