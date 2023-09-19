@@ -24,7 +24,7 @@ export default function Home({ featuredItems, ids }) {
       <FeaturedSection featuredItems={featuredItems} />
       <SplashText1 />
       <SplashText2 />
-      {ids.json()}
+      {ids}
     </div>
   )
 }
@@ -52,7 +52,7 @@ export async function getStaticProps() {
   const ids = await fetch(`https://api.printful.com/store/products`, {
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + printfulApiKey },
-  })
+  }).then(response => { return response.json() })
   
   return {
     props: {
