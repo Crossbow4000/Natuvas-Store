@@ -8,7 +8,7 @@ import FeaturedSection from '../components/home/featuredSection/featuredSection.
 import SplashText1 from '../components/home/splashText1/splashText1.js'
 import SplashText2 from '../components/home/splashText2/splashText2.js'
 
-export default function Home({ featuredItems }) {
+export default function Home({ featuredItems, ids }) {
 
   useEffect(() => { window.scrollTo(0, 80) }, [])
 
@@ -24,6 +24,7 @@ export default function Home({ featuredItems }) {
       <FeaturedSection featuredItems={featuredItems} />
       <SplashText1 />
       <SplashText2 />
+      {JSON.stringify(ids.json)}
     </div>
   )
 }
@@ -47,10 +48,16 @@ export async function getStaticProps() {
       return { name: json.result.sync_product.name, thumbnail_url: json.result.sync_product.thumbnail_url }
     })
   )
+
+  const ids = await fetch(`https://api.printful.com/store/products`, {
+    method: 'GET',
+    headers: { 'Authorization': 'Bearer ' + printfulApiKey },
+  })
   
   return {
     props: {
       featuredItems: featuredItemsList,
+      ids: ids,
     },
   }
 }
