@@ -24,7 +24,7 @@ export default function Home({ featuredItems, ids }) {
       <FeaturedSection featuredItems={featuredItems} />
       <SplashText1 />
       <SplashText2 />
-      {ids}
+      {}
     </div>
   )
 }
