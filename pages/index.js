@@ -11,6 +11,9 @@ import SplashText2 from '../components/home/splashText2/splashText2.js'
 export default function Home({ featuredItems, propId }) {
 
   useEffect(() => { window.scrollTo(0, 80) }, [])
+  useEffect(() => {
+    console.log(propId)
+  })
 
   return (
     <div>
