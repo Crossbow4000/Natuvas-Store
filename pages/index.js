@@ -44,7 +44,7 @@ export async function getStaticProps() {
       })
 
       const json = await printfulResponse.json()
-      return json.result
+      return { name: json.result.sync_product.name, thumbnail_url: json.result.sync_product.thumbnail_url }
     })
   )
   
