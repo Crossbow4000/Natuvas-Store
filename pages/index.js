@@ -1,8 +1,6 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
 
-import getFeaturedItems from '../data/featured.js'
-
 import NavigationBar from '../components/home/navigationBar/navigationBar.js'
 import HeroSection from '../components/home/heroSection/heroSection.js'
 import WelcomeSection from '../components/home/welcomeSection/welcomeSection.js'
@@ -31,13 +29,18 @@ export default function Home({ featuredItems }) {
 }
 
 export async function getStaticProps() {
-  const featuredItems = await getFeaturedItems()
+  const featuredItems = [
+    320175557,
+    320175560 
+  ]
+  // 0008
+  // 0011
 
   const printfulApiKey = await process.env.PRINTFUL
 
   let   featuredItemsList = []
 
-  for(let i=0; i < featuredItems.length; i++) {
+  for(let i = 0; i < featuredItems.length; i++) {
     const printfulResponse = await fetch('https://api.printful.com/store/products/' + featuredItems[i], {
       method: 'GET',
       headers: {'Authorization': 'Bearer ' + printfulApiKey,}
