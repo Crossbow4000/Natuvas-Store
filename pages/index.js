@@ -56,11 +56,12 @@ export async function getStaticProps() {
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + printfulApiKey },
   })
+  .then(response => { return response.json() })
   
   return {
     props: {
       featuredItems: featuredItemsList,
-      propId: ids.json(),
+      propId: ids,
     },
   }
 }
