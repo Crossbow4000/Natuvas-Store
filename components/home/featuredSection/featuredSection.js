@@ -5,7 +5,14 @@ export default function FeaturedSection({ featuredItems }) {
   return (
     <div className={styles.featuredSection}>
       <h2 className={styles.featuredSectionTitle}>Featured</h2>
-      <p className={styles.p}>{JSON.stringify(featuredItems)}</p>
+      {featuredItems.map(item => {
+        return(
+          <div>
+            <p>{item.name}</p>
+            <img src={item.thumbnail_url}/>
+          </div>
+        )
+      })}
     </div>
   )
 }
