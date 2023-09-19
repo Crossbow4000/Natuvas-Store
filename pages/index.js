@@ -34,8 +34,6 @@ const featuredItems = [
 ]
 
 export async function getStaticProps() {
-  
-
   const printfulApiKey = await process.env.PRINTFUL
 
   const featuredItemsList = await Promise.all(
@@ -45,8 +43,8 @@ export async function getStaticProps() {
         headers: { 'Authorization': 'Bearer ' + printfulApiKey },
       })
 
-      const json = await printfulResponse.json();
-      return { name: json.result.name, thumbnail_url: json.result.thumbnail_url };
+      const json = await printfulResponse.json()
+      return { name: json.result.name, thumbnail_url: json.result.thumbnail_url }
     })
   )
   
