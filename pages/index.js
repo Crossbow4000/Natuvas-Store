@@ -30,7 +30,7 @@ export default function Home({ featuredItems, propId }) {
 }
 
 const featuredItems = [ 
-  320175574, // 0008,
+  320175557, // 0008,
   320175562  // 0011
 ]
 
