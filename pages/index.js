@@ -49,7 +49,7 @@ export async function getStaticProps() {
     })
   )
 
-  const ids = await fetch(`https://api.printful.com/store/products?limit=100`, {
+  const ids = await fetch(`https://api.printful.com/store/products`, {
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + printfulApiKey },
   })
