@@ -50,14 +50,15 @@ export async function getStaticProps() {
           'Authorization': 'Bearer ' + printfulApiKey,
           'Content-Type': 'application/json',
         },
-      });
+      })
 
-      const data = response.json().data
+      const json = response.json()
+      const data = json.data
 
       // return { "name": data.name, "thumbnail": data.thumbnail_url }
       return data
     })
-  );
+  )
 
   return {
     props: {
