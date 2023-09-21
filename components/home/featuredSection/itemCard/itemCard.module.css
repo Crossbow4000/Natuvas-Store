@@ -10,15 +10,15 @@
 }
 
 .itemCardImage {
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
 
   background-size: 100%;
   background-position: center;
 
   border-radius: 3px;
 
-  transition: background-size 100ms ease-in-out;
+  transition: background-size 300ms ease-in-out;
 }
 .itemCard:hover .itemCardImage {
   background-size: 120%;
