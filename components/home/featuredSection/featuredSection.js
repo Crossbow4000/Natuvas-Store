@@ -7,7 +7,7 @@ export default function FeaturedSection({ featuredItems }) {
       <h2 className={styles.featuredSectionTitle}>Featured</h2>
       <div className={styles.featuredSectionItemsContainer}>
         {featuredItems.map(item => {
-          return <ItemCard itemName={item.name} thumbnailUrl={item.thumbnailUrl}/>
+          return <ItemCard itemName={item.name} image={item.image}/>
         })}
       </div>
     </div>
