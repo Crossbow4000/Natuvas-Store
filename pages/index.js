@@ -53,9 +53,9 @@ export async function getStaticProps() {
       });
 
       const data = response.json().data
-      // const data = json
 
-      return { "name": data.name, "thumbnail": data.thumbnail_url }
+      // return { "name": data.name, "thumbnail": data.thumbnail_url }
+      return data
     })
   );
 
