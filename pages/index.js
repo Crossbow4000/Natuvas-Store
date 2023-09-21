@@ -37,12 +37,25 @@ const featuredItems = [
 export async function getStaticProps() {
   const printfulApiKey = await process.env.PRINTFUL
 
-  const featuredItemsList = await fetch(`https://api.printful.com/v2/sync-products?limit=100`, {
+  const allItems = await fetch(`https://api.printful.com/v2/sync-products?limit=100`, {
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + printfulApiKey },
   })
   .then(response => { return response.json() })
   .then(data => { return JSON.stringify(data) })
+
+  const featuredItemsList = await Promise.all(
+    featuredItems.map(async (productId) => {
+      const response = await fetch(`https://api.printful.com/v2/sync-products/${productId}`, {
+        headers: {
+          'Authorization': 'Bearer ' + printfulApiKey,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      return response.json()
+    })
+  );
 
   return {
     props: {
