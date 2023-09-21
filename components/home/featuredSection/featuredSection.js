@@ -5,7 +5,7 @@ export default function FeaturedSection({ featuredItems }) {
   return (
     <div className={styles.featuredSection}>
       <h2 className={styles.featuredSectionTitle}>Featured</h2>
-      <p>{featuredItems}</p>
+      <p className={styles.p}>{featuredItems}</p>
     </div>
   )
 }
