@@ -13,6 +13,8 @@
   height: 200px;
   width: 200px;
 
+  background-size: cover;
+
   border-radius: 3px;
 }
 .itemCard:hover .itemCardImage {
