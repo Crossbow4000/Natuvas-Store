@@ -13,14 +13,10 @@
   height: 200px;
   width: 200px;
 
-  object-fit: cover;
-
-  overflow: hidden;
-
   border-radius: 3px;
 }
 .itemCard:hover .itemCardImage {
-  transform: scale(1.1);
+  background-size: 120%;
 }
 
 .itemCardName {
