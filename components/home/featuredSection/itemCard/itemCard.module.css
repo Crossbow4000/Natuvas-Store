@@ -1,8 +1,18 @@
 .itemCard {
   padding: 10px;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 .itemCardImage {
   height: 200px;
   width: 200px;
+}
+
+.itemCardName {
+  height: 30px;
+
+  font-size: 20px;
 }
