@@ -52,7 +52,9 @@ export async function getStaticProps() {
         },
       });
 
-      return response.json()
+      data = response.json().data
+
+      return { "name": data.name, "thumbnail": data.thumbnail_url }
     })
   );
 
