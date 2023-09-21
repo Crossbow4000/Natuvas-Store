@@ -45,7 +45,7 @@ export async function getStaticProps() {
 
   const featuredItemsList = await Promise.all(
     featuredItems.map(async (productId) => {
-      const response = await fetch(`https://api.printful.com/v2/sync-products/${productId}`, {
+      const response = await fetch(`https://api.printful.com/v2/sync-products/${productId}/variants`, {
         headers: {
           'Authorization': 'Bearer ' + printfulApiKey,
           'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ export async function getStaticProps() {
       })
       .then(raw => { return raw.json() })
 
-      return { "name": response.data.name, "thumbnailUrl": response.data.thumbnail_url }
+      return { "name": response[0].data.name, "thumbnailUrl": response[0].data.thumbnail_url }
     })
   )
 
