@@ -40,9 +40,8 @@ export async function getStaticProps() {
   const featuredItemsList = await fetch(`https://api.printful.com/v2/sync-products`, {
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + printfulApiKey },
-  }).then((response) => { return JSON.stringify(response.json()) })
+  }).then(response => { return JSON.stringify(response.json()) })
 
-  
   return {
     props: {
       featuredItems: featuredItemsList,
