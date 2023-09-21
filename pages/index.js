@@ -51,10 +51,9 @@ export async function getStaticProps() {
           'Content-Type': 'application/json',
         },
       })
+      .then(raw => { return raw.json() })
 
-      const json = response.json()
-
-      return { "name": json.data.name, "thumbnail": json.data.thumbnail_url }
+      return { "name": response.data.name, "thumbnail": response.data.thumbnail_url }
     })
   )
 
