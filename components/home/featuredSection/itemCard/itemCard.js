@@ -3,9 +3,9 @@ import homeStyles from '../../home.module.css';
 
 export default function ItemCard({ itemName, thumbnailUrl }) {
   return (
-    <div>
-      <img src={thumbnailUrl} alt={`An image of ${itemName}`} />
-      <p>{itemName}</p>
+    <div className={styles.itemCard}>
+      <img className={styles.itemCardImage} src={thumbnailUrl} alt={`An image of ${itemName}`} />
+      <p className={styles.itemCardName}>{itemName}</p>
     </div>
   )
 }
