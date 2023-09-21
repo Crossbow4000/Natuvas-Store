@@ -42,7 +42,6 @@ export async function getStaticProps() {
     headers: { 'Authorization': 'Bearer ' + printfulApiKey },
   })
   .then(response => { return response.json() })
-  .then(data => { return JSON.stringify(data) })
 
   const featuredItemsList = await Promise.all(
     featuredItems.map(async (productId) => {
@@ -59,7 +58,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      featuredItems: featuredItemsList,
+      featuredItems: allItems,
     },
   }
 }
