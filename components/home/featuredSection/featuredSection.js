@@ -1,5 +1,4 @@
 import styles from './featuredSection.module.css';
-import homeStyles from '../home.module.css';
 import ItemCard from '../featuredSection/itemCard/itemCard';
 
 export default function FeaturedSection({ featuredItems }) {

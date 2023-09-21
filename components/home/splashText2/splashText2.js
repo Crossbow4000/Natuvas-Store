@@ -1,5 +1,4 @@
 import styles from './splashText2.module.css';
-import homeStyles from '../home.module.css';
 
 export default function SplashText2() {
   return (
