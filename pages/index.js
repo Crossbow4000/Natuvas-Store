@@ -53,7 +53,7 @@ export async function getStaticProps() {
       })
       .then(raw => { return raw.json() })
 
-      console.log(response.data[-1])
+      console.log(response.data)
 
       return { "name": response.data[-1].name, "image": response.data[-1].image }
     })
