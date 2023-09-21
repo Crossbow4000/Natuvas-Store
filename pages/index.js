@@ -38,7 +38,7 @@ const featuredItems = [
 export async function getStaticProps() {
   const printfulApiKey = await process.env.PRINTFUL
 
-  const featuredItemsList = await fetch(`https://api.printful.com/v2/sync-products`, {
+  const featuredItemsList = await fetch(`https://api.printful.com/v2/sync-products?limit=100`, {
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + printfulApiKey },
   })
