@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
 }
+.itemCard:hover {
+  cursor: pointer;
+}
 
 .itemCardImage {
   height: 200px;
@@ -13,6 +16,9 @@
   background-size: cover;
 
   border-radius: 3px;
+}
+.itemCard:hover .itemCardImage {
+  background-size: 110%;
 }
 
 .itemCardName {
