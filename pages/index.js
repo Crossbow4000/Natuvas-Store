@@ -52,8 +52,8 @@ export async function getStaticProps() {
         },
       });
 
-      json = response.json()
-      data = json.data
+      const data = response.json().data
+      // const data = json
 
       return { "name": data.name, "thumbnail": data.thumbnail_url }
     })
