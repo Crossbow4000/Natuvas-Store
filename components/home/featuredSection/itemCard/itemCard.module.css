@@ -17,6 +17,8 @@
   background-position: center;
 
   border-radius: 3px;
+
+  transition: forward 100ms ease-in-out;
 }
 .itemCard:hover .itemCardImage {
   background-size: 120%;
