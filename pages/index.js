@@ -58,7 +58,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      featuredItems: allItems,
+      featuredItems: featuredItemsList,
     },
   }
 }
