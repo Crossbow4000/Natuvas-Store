@@ -13,12 +13,12 @@
   height: 200px;
   width: 200px;
 
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
 
   border-radius: 3px;
 
-  transition: forward 100ms ease-in-out;
+  transition: background-size 100ms ease-in-out;
 }
 .itemCard:hover .itemCardImage {
   background-size: 120%;
