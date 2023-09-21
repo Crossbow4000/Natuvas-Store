@@ -21,7 +21,7 @@
   transition: background-size 300ms ease-in-out;
 }
 .itemCard:hover .itemCardImage {
-  background-size: 120%;
+  background-size: 130%;
 }
 
 .itemCardName {
