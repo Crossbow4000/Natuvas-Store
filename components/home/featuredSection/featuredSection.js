@@ -5,14 +5,7 @@ export default function FeaturedSection({ featuredItems }) {
   return (
     <div className={styles.featuredSection}>
       <h2 className={styles.featuredSectionTitle}>Featured</h2>
-      {featuredItems.map(item => {
-        return(
-          <div>
-            <p>{item.name}</p>
-            <img src={item.thumbnail_url}/>
-          </div>
-        )
-      })}
+      <p>{featuredItems}</p>
     </div>
   )
 }
