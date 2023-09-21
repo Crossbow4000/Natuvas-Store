@@ -34,7 +34,6 @@ const featuredItems = [
   320175562  // 0011
 ]
 
-
 export async function getStaticProps() {
   const printfulApiKey = await process.env.PRINTFUL
 
