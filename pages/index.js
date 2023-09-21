@@ -53,7 +53,7 @@ export async function getStaticProps() {
       })
       .then(raw => { return raw.json() })
 
-      console.warn(response)
+      console.warn(response.data._links.sync_variants)
 
       return { "name": response.data[-1].name, "image": response.data[-1].image }
     })
