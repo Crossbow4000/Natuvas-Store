@@ -48,7 +48,6 @@ export async function getStaticProps() {
       const response = await fetch(`https://api.printful.com/products`, {
         headers: {
           'Authorization': 'Bearer ' + printfulApiKey,
-          'Content-Type': 'application/json',
         },
       })
       .then(raw => { return raw.json() })
