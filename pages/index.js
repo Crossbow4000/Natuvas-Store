@@ -39,7 +39,7 @@ export async function getStaticProps() {
 
   const allItems = await fetch(`https://api.printful.com/products/?limit=100`, {
     method: 'GET',
-    headers: { 'Authorization': 'Bearer ' + printfulApiKey },
+    'Authorization': 'Bearer ' + printfulApiKey,
   })
   .then(response => { return response.json() })
 
@@ -53,11 +53,11 @@ export async function getStaticProps() {
       })
       .then(raw => { return raw.json() })
 
-      console.log(allItems)
-
       return { "name": "Image", "image": "response.data[-1].image" }
     })
   )
+
+  console.log(allItems)
 
   return {
     props: {
