@@ -35,33 +35,35 @@ const featuredItems = [
 ]
 
 export async function getStaticProps() {
-  const printfulApiKey = await process.env.PRINTFUL
+  const printfulApiKey = process.env.PRINTFUL;
 
-  const allItems = await fetch(`https://api.printful.com/products/?limit=100`, {
+  const allItemsResponse = await fetch(`https://api.printful.com/products?limit=100`, {
     method: 'GET',
-    'Authorization': 'Bearer ' + printfulApiKey,
-  })
-  .then(response => { return response.json() })
+    headers: {
+      'Authorization': 'Bearer ' + printfulApiKey,
+    },
+  });
+  const allItemsData = await allItemsResponse.json();
 
   const featuredItemsList = await Promise.all(
     featuredItems.map(async (productId) => {
-      const response = await fetch(`https://api.printful.com/products`, {
+      const response = await fetch(`https://api.printful.com/products/`, {
+        method: 'GET',
         headers: {
-          method: 'GET',
           'Authorization': 'Bearer ' + printfulApiKey,
         },
-      })
-      .then(raw => { return raw.json() })
+      });
+      const responseData = await response.json();
 
-      return { "name": "Image", "image": "response.data[-1].image" }
+      return { "name": "Image", "image": "responseData.data[0].image" };
     })
-  )
+  );
 
-  console.log(allItems)
+  console.log(allItemsData);
 
   return {
     props: {
       featuredItems: featuredItemsList,
     },
-  }
+  };
 }
