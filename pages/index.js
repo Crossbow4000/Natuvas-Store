@@ -36,6 +36,7 @@ const featuredItems = [
 
 export async function getStaticProps() {
   const printfulApiKey = process.env.PRINTFUL;
+  console.log(printfulApiKey)
 
   const allItemsResponse = await fetch(`https://api.printful.com/products?limit=100`, {
     method: 'GET',
